@@ -1,0 +1,23 @@
+<h1 class="display-4 text-center history">История</h1>
+<p class="text-center text-muted">Данные о проводимых ранее тестированиях</p>
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Интеллект пользователя</th>
+        <th scope="col">Диапазон сложности вопросов</th>
+        <th scope="col">Результат тестирования</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each history}}
+    <tr>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.mind}}</td>
+        <td>{{this.minDifficulty}} - {{this.maxDifficulty}}</td>
+        <td>{{this.result}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

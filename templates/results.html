@@ -1,0 +1,51 @@
+<h4 class="text-center">Результаты тестирования</h4>
+<table class="table">
+    <caption>
+        Тестируемый ответил правильно на {{results.correct}} {{voprosy}} из {{results.total}}
+    </caption>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th
+                    scope="col"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Уникальный номер вопроса"
+            >
+                ID
+            </th>
+            <th
+                    scope="col"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Сколько раз вопрос встречался ранее"
+            >
+                Встречался ранее
+            </th>
+            <th scope="col">Сложность вопроса</th>
+            <th
+                    scope="col"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Был ли дан правильный ответ"
+            >
+                Правильный ответ
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each results.results}}
+            <tr>
+                <th scope="row">{{inc @index}}</th>
+                <td>{{this.id}}</td>
+                <td>{{this.used}}</td>
+                <td>{{this.difficulty}}</td>
+                {{#if this.answer}}
+                    <td class="table-success">Да</td>
+                {{else}}
+                    <td class="table-warning">Нет</td>
+                {{/if}}
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

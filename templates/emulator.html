@@ -1,0 +1,64 @@
+<h1 class="display-4 text-center">Эмулятор</h1>
+<form class="start">
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="difficultyFrom">Сложность вопросов</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input
+                        type="number"
+                        min="0"
+                        max="100"
+                        class="form-control"
+                        id="difficultyFrom"
+                        name="difficultyFrom"
+                        placeholder="От"
+                        required
+                >
+            </div>
+            <div class="col">
+                <input
+                        type="number"
+                        min="0"
+                        max="100"
+                        class="form-control"
+                        id="difficultyTo"
+                        name="difficultyTo"
+                        placeholder="До"
+                        required
+                >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="mind">Интеллект тестируемого</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input
+                        type="number"
+                        min="0"
+                        max="100"
+                        class="form-control"
+                        id="mind"
+                        name="mind"
+                        placeholder="0 - 100"
+                        required
+                >
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <div class="text-center">
+                    <input type="submit" class="btn btn-outline-success" value="Запустить эмулятор">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="results"></div>
